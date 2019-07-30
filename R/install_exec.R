@@ -1,12 +1,12 @@
-exec_conda <- function(os, ...){
-  UseMethod("exec_conda")
+install_exec <- function(os, ...){
+  UseMethod("install_exec")
 }
 
-exec_conda.default <- function(os, ...){
+install_exec.default <- function(os, ...){
   stop("no method for ", class(os)[1L])
 }
 
-exec_conda.Windowsx86 <- function(os, dest, silent = silent){
+install_exec.Windowsx86 <- function(os, dest, silent = silent){
   if (silent) {
     pid <- sys::exec_wait(dest, args = c("/InstallationType=JustMe",
                                          "/RegisterPython=0", "/S", "/D=", path))
@@ -16,7 +16,7 @@ exec_conda.Windowsx86 <- function(os, dest, silent = silent){
 }
 
 
-exec_conda.Windowsx64 <- function(os, dest, path, silent = silent){
+install_exec.Windowsx64 <- function(os, dest, path, silent = silent){
   if (silent) {
     pid <- sys::exec_wait(dest, args = c("/InstallationType=JustMe",
                                          "/RegisterPython=0", "/S", "/D=", path))
@@ -26,10 +26,10 @@ exec_conda.Windowsx64 <- function(os, dest, path, silent = silent){
 }
 
 
-exec_conda.Darwinx64 <- function(os, dest, path, silent = silent){
+install_exec.Darwinx64 <- function(os, dest, path, silent = silent){
   sys::exec_wait("bash", args = c(dest, "-b", "-p", path))
 }
 
-exec_conda.Linuxx64 <- function(os, dest, path, silent = silent){
+install_exec.Linuxx64 <- function(os, dest, path, silent = silent){
   sys::exec_wait("bash", args = c(dest, "-b", "-p", path))
 }

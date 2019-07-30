@@ -21,7 +21,7 @@ install_conda <- function(path = conda_loc(),
   down_conda(os, dest)
   
   cat("Install Conda.\n")
-  install_exec_conda(os, dest, path, silent)
+  install_exec(os, dest, path, silent)
   
   fs::file_delete(dest)
   cat("Installation complete.\n")
