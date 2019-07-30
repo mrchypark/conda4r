@@ -22,7 +22,7 @@ conda_available <- function(){
 }
 
 conda_loc <- function(){
-  return(fs::path(fs::path_home(), "Miniconda3"))
+  return(fs::path(fs::path_home(), "miniconda3"))
 }
 
 #' @importFrom fs path_split path_join
