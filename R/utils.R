@@ -1,3 +1,6 @@
+#' Get os info
+#' 
+#' @export
 get_os <- function(){
   os <- "os_class"
   bits <- Sys.info()["machine"]
@@ -29,6 +32,10 @@ conda_root <- function(){
   return(fs::path_join(path))
 }
 
+#' conda update
+#' 
+#' @param conda conda binary location. Defualt is auto.
+#' @export
 udpate_conda <- function(conda = "auto"){
   conda <- reticulate::conda_binary(conda)
   sys::exec_wait(conda, args = c("update","-y","-n","base","-c","defaults","conda"))

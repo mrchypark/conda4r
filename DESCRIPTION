@@ -8,14 +8,14 @@ Authors@R:
            email = "mrchypark@gmail.com",
            comment = c(ORCID = "0000-0001-6474-2570"))
 Description: What the package does (one paragraph).
-License: What license it uses
+License: BSD 3-Clause + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Imports: 
     magrittr,
-    reticulate,
+    reticulate (>= 1.12.0),
     sys,
     fs,
     tibble,

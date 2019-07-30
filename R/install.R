@@ -6,7 +6,6 @@
 #' @param silent silent installation with Justme, add PATH options. Defualt is TRUE.
 #'
 #' @importFrom fs file_delete
-#' @importFrom rstudioapi restartSession hasFun
 #'
 #' @export
 install_conda <- function(path = conda_loc(),
