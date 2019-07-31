@@ -1,5 +1,5 @@
 Package: conda4r
-Title: R Wrapper of Miniconda Installer
+Title: R Wrapper of Miniconda Installer Cross Platform
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Chanyub",
@@ -7,14 +7,15 @@ Authors@R:
            role = c("aut", "cre"),
            email = "mrchypark@gmail.com",
            comment = c(ORCID = "0000-0001-6474-2570"))
-Description: What the package does (one paragraph).
-License: BSD 3-Clause + file LICENSE
+Description: The conda4r package provides a function for installing miniconda 
+            without stress on R users. This package is the basis 
+            of the multilinguer package.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Imports: 
-    magrittr,
     reticulate (>= 1.12.0),
     sys,
     fs

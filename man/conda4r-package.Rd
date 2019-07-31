@@ -4,9 +4,11 @@
 \name{conda4r-package}
 \alias{conda4r}
 \alias{conda4r-package}
-\title{conda4r: R Wrapper of Miniconda Installer}
+\title{conda4r: R Wrapper of Miniconda Installer Cross Platform}
 \description{
-What the package does (one paragraph).
+The conda4r package provides a function for installing miniconda 
+            without stress on R users. This package is the basis 
+            of the multilinguer package.
 }
 \author{
 \strong{Maintainer}: Chanyub Park \email{mrchypark@gmail.com} (0000-0001-6474-2570)

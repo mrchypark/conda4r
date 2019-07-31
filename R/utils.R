@@ -13,10 +13,10 @@ get_os <- function(){
 #' this function depends on find_conda() from reticulate package.
 #' if find_conda() return NULL, conda_available() return FALSE.
 #'
-#' @import reticulate
+#' @importFrom reticulate conda_binary
 #' @export
 conda_available <- function(){
-  !is.null(reticulate:::find_conda())
+  !is.null(reticulate::conda_binary())
 }
 
 conda_loc <- function(){
@@ -24,8 +24,9 @@ conda_loc <- function(){
 }
 
 #' @importFrom fs path_split path_join
+#' @importFrom reticulate conda_binary
 conda_root <- function(){
-  path <- fs::path_split(reticulate:::find_conda())[[1]]
+  path <- fs::path_split(reticulate::conda_binary())
   path <- path[1:(length(path)-2)]
   return(fs::path_join(path))
 }
@@ -33,12 +34,15 @@ conda_root <- function(){
 #' conda update
 #' 
 #' @param conda conda binary location. Defualt is auto.
+#' @importFrom reticulate conda_binary
+#' @importFrom sys exec_wait
 #' @export
 update_conda <- function(conda = "auto"){
   conda <- reticulate::conda_binary(conda)
   sys::exec_wait(conda, args = c("update","-y","-n","base","-c","defaults","conda"))
 }
 
+#' @importFrom fs path
 conda_uninstall_binary <- function(){
   fs::path(conda_root(), "Uninstall-Miniconda3.exe")
 }
@@ -51,9 +55,8 @@ conda_uninstall_binary <- function(){
 #' @importFrom fs dir_ls path file_copy
 #' @export
 fix_ssl_error <- function(loc = conda_root()){
-  . <- NULL
-  from<- fs::dir_ls(fs::path(loc, "Library","bin")) %>%
-    grep("ssl|libcrypto", ., value = T)
+  tar_path <- fs::dir_ls(fs::path(loc, "Library","bin"))
+  from <- grep("ssl|libcrypto", tar_path, value = T)
   to <- gsub(fs::path("Library","bin"), fs::path("DLLs"), from)
   fs::file_copy(from, to, overwrite = T)
 }

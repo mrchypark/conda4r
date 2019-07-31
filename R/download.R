@@ -36,7 +36,7 @@ down_conda.Linuxx64 <- function(os, dest){
   download.file(down_path, destfile = dest, mode = "wb")
 }
 
-
+#' @importFrom fs path path_temp path_home
 conda_dest_loc <- function(os){
   UseMethod("conda_dest_loc")
 }
