@@ -11,28 +11,28 @@ down_conda.default <- function(os){
 
 down_conda.Windowsx86 <- function(os, dest){
   down_path <-
-    "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86.exe"
+    "https://repo.continuum.io/miniconda/Miniconda2-4.6.14-Windows-x86.exe"
   download.file(down_path, destfile = dest, mode = "wb")
 }
 
 
 down_conda.Windowsx64 <- function(os, dest){
   down_path <-
-    "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe"
+    "https://repo.continuum.io/miniconda/Miniconda2-4.6.14-Windows-x86_64.exe"
   download.file(down_path, destfile = dest, mode = "wb")
 }
 
 
 down_conda.Darwinx64 <- function(os, dest){
   down_path <-
-    "https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+    "https://repo.continuum.io/miniconda/Miniconda2-4.6.14-MacOSX-x86_64.sh"
   download.file(down_path, destfile = dest)
 }
 
 
 down_conda.Linuxx64 <- function(os, dest){
   down_path <-
-    "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+    "https://repo.anaconda.com/miniconda/Miniconda3-4.6.14-Linux-x86_64.sh"
   download.file(down_path, destfile = dest, mode = "wb")
 }
 
