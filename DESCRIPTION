@@ -18,4 +18,5 @@ RoxygenNote: 6.1.1
 Imports: 
     reticulate (>= 1.12.0),
     sys,
-    fs
+    fs,
+    R.utils

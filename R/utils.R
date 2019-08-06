@@ -54,10 +54,12 @@ conda_uninstall_binary <- function(){
 #'
 #' @param loc location of conda
 #' @importFrom fs dir_ls path file_copy
+#' @importFrom R.utils createLink
 #' @export
 fix_ssl_error <- function(loc = conda_root()){
   tar_path <- fs::dir_ls(fs::path(loc, "Library","bin"))
   from <- grep("ssl|libcrypto", tar_path, value = T)
   to <- gsub(fs::path("Library","bin"), fs::path("DLLs"), from)
+  R.utils::createLink(to, from, overwrite = T, methods = "windows-symlink")
   fs::file_copy(from, to, overwrite = T)
 }

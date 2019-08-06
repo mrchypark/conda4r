@@ -16,12 +16,12 @@ install_conda <- function(path = conda_loc(),
   
   dependency(os)
   
-  cat("Download Conda.\n")
-  down_conda(os, dest)
+  if (!silent) cat("Download conda\n")
+  down_conda(os, dest, silent)
   
-  cat("Install Conda.\n")
+  if (!silent) cat("Install conda\n")
   install_exec(os, dest, path, silent)
   
   fs::file_delete(dest)
-  cat("Installation complete.\n")
+  if (!silent) cat("Installation complete\n")
 }

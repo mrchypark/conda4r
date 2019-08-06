@@ -28,5 +28,19 @@ remotes::install_github("mrchypark/conda4r")
 ``` r
 library(conda4r)
 install_conda()
+update_conda()
 ```
 
+## Windows 10 issue
+
+[Issue](https://github.com/conda/conda/issues/8273) report ssl error.
+`fix_ssl_error()` function provide symlink solution issue mentioned.
+``` r
+fix_ssl_error()
+```
+
+## multilinguer project
+
+This package is part fo multilinguer project. [multilinguer][multilinguer] is to provide cross-platform support functions of other language installation for R users.
+
+[multilinguer]: https://github.com/mrchypark/multilinguer
