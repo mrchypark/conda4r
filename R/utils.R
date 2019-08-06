@@ -16,7 +16,8 @@ get_os <- function(){
 #' @importFrom reticulate conda_binary
 #' @export
 conda_available <- function(){
-  !is.null(reticulate::conda_binary())
+  tem <- try(reticulate::conda_binary("auto"), silent = T)
+  return(ifelse(class(tem) == "try-error", F, T))
 }
 
 conda_loc <- function(){
