@@ -27,7 +27,7 @@ conda_loc <- function(){
 #' @importFrom fs path_split path_join
 #' @importFrom reticulate conda_binary
 conda_root <- function(){
-  path <- fs::path_split(reticulate::conda_binary())
+  path <- fs::path_split(reticulate::conda_binary())[[1]]
   path <- path[1:(length(path)-2)]
   return(fs::path_join(path))
 }
