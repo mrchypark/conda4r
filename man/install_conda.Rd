@@ -4,12 +4,14 @@
 \alias{install_conda}
 \title{install conda}
 \usage{
-install_conda(path = conda_loc(), silent = T)
+install_conda(path = conda_loc(), silent = T, quiet = F)
 }
 \arguments{
 \item{path}{installation path. Defualt is userhome/Miniconda3}
 
 \item{silent}{silent installation with Justme, add PATH options. Defualt is TRUE.}
+
+\item{quiet}{print step or not. Defualt is FALSE.}
 }
 \description{
 Defualt is Miniconda3. Other options are not this package scope.

@@ -4,24 +4,26 @@
 #'
 #' @param path installation path. Defualt is userhome/Miniconda3
 #' @param silent silent installation with Justme, add PATH options. Defualt is TRUE.
+#' @param quiet print step or not. Defualt is FALSE.
 #'
 #' @importFrom fs file_delete
 #'
 #' @export
 install_conda <- function(path = conda_loc(),
-                          silent = T) {
+                          silent = T,
+                          quiet = F) {
   os <- get_os()
   dest <- conda_dest_loc(os)
   path <- conda_loc()
   
   dependency(os)
   
-  if (!silent) cat("Download conda\n")
-  down_conda(os, dest, silent)
+  if (!quiet) cat("Download conda\n")
+  down_conda(os, dest, quiet)
   
-  if (!silent) cat("Install conda\n")
+  if (!quiet) cat("Install conda\n")
   install_exec(os, dest, path, silent)
   
   fs::file_delete(dest)
-  if (!silent) cat("Installation complete\n")
+  if (!quiet) cat("Installation complete\n")
 }
