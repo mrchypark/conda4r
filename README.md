@@ -1,6 +1,8 @@
-# conda4r <img src="man/figures/logo.png" align="right" height=140/>
+# conda4r <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/mrchypark/conda4r?branch=master&svg=true)](https://ci.appveyor.com/project/mrchypark/conda4r)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 The goal of conda4r is to install miniconda3.
