@@ -3,6 +3,7 @@
 <!-- badges: start -->
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/mrchypark/conda4r?branch=master&svg=true)](https://ci.appveyor.com/project/mrchypark/conda4r)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build status](https://travis-ci.org/mrchypark/conda4r.svg?branch=master)](https://travis-ci.org/mrchypark/conda4r)
 <!-- badges: end -->
 
 The goal of conda4r is to install miniconda3.

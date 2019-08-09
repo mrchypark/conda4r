@@ -1,0 +1,6 @@
+destination: docs
+title: conda4r
+url: https://mrchypark.github.io/conda4r
+template:
+  params:
+    ganalytics: UA-47822682-14

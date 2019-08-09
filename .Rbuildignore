@@ -3,3 +3,7 @@
 ^LICENSE\.md$
 ^R/\.logo\.R$
 ^appveyor\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.travis\.yml$
