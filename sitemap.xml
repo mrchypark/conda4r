@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mrchypark.github.io/conda4r/index.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/conda4r/reference/conda4r-package.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/conda4r/reference/conda_available.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/conda4r/reference/fix_ssl_error.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/conda4r/reference/install_conda.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/conda4r/reference/update_conda.html</loc>
+  </url>
+</urlset>
