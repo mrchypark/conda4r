@@ -40,7 +40,8 @@ conda_root <- function(){
 #' @export
 update_conda <- function(conda = "auto"){
   conda <- reticulate::conda_binary(conda)
-  sys::exec_wait(conda, args = c("update","-y","-n","base","-c","defaults","conda"))
+  res <- sys::exec_wait(conda, args = c("update","-y","-n","base","-c","defaults","conda"))
+  invisible(res)
 }
 
 #' @importFrom fs path
