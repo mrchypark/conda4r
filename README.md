@@ -1,4 +1,4 @@
-# conda4r
+# conda4r <img src="man/figures/logo.png" align="right" height=140/>
 
 <!-- badges: start -->
 <!-- badges: end -->
