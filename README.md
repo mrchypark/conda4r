@@ -1,3 +1,5 @@
+# PLZ USE <https://github.com/mrchypark/multilinguer>
+
 # conda4r <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
